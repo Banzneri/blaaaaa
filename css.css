@@ -1,0 +1,196 @@
+body {
+    background-color: white;
+}
+
+h1 {
+	font-family: Muli;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+    text-align: center;
+    color: orange;
+}
+
+h2 {
+    margin-top:0;
+}
+
+body.etusivu a.etusivu, body.lomake a.lomake, body.taulukko a.taulukko {
+    background-color: white;
+    color: orange;
+    height: 26.4px;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: orange;
+}
+
+.redBar {
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 106px;
+    background-color: #c00;
+    position:absolute;
+}
+
+.left {
+    position: relative;
+    text-align: left;
+    width: 500px;
+    left: 50px;
+}
+
+.right {
+    position: relative;
+    text-align: right;
+    width: 500px;
+    left: 700px;
+}
+
+.contentLeft {
+    position: absolute;
+    left: 50%;
+    top:100px;
+    margin-left: -450px;
+    width: 200px;
+    height: 500px;
+    
+}
+
+.contentCenter {
+    position:absolute;
+    left:50%;
+    top:120px;
+    margin-left: -230px;
+    width: 700px;
+    border-left-style: dotted;
+    border-left-color: orange;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align:justify;
+    
+}
+
+.navigationBarLinks {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    float:left;
+    margin-right: 5px;
+    background-color: orange;
+    color: white;
+    font-family: Muli;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+    text-decoration: none;
+    width: 107.5px;
+    text-align: center;
+}
+
+a.navigationBarLinks:hover {
+    background-color: white;
+    color: orange;
+    height: 26.4px;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: green;
+}
+
+a.navigationBarLinks:active {
+    background-color: white;
+    color: #900;
+    height: 26.4px;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: green;
+}
+
+.navigationBar {
+    position: absolute;
+    left: 50%;
+    margin-left: -450px;
+    width: 900px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 912px) {
+    body.etusivu a.etusivu, body.lomake a.lomake, body.taulukko a.taulukko {
+        background-color: lightgray;
+        color: #900;
+        border-left-style: solid;
+        border-left-width: 5px;
+        border-left-color: orange;
+        border-bottom-style: dashed;
+        border-bottom-width: 1px;
+        border-bottom-color: orange;
+        height: 26.4px;
+        
+    }
+    
+    a.navigationBarLinks {
+        display:block;
+        float:none;
+        width:200px;
+        text-align:left;
+        color: #900;
+        background-color: white;
+        border-bottom-style: dashed;
+        border-bottom-width: 1px;
+        border-bottom-color: orange;
+        border-left-style: solid;
+        border-left-width: 5px;
+        border-left-color: orange;
+        padding-left: 3px;
+        margin-bottom: 3px;
+        height: 26.4px;
+        
+    }
+    
+    a.navigationBarLinks:hover {
+        background-color: lightgray;
+        color: #900;
+        border-bottom-style: dashed;
+        border-bottom-width: 1px;
+        border-bottom-color: orange;
+        border-left-style: solid;
+        border-left-width: 5px;
+        border-left-color: green;
+        height: 26.4px;
+    }
+
+    a.navigationBarLinks:active {
+        background-color: orange;
+        color: white;
+        border-left-style: solid;
+        border-left-width: 5px;
+        border-left-color: green;
+        border-bottom-style: dashed;
+        border-bottom-width: 1px;
+        border-bottom-color: orange;
+        
+    }
+    
+    div.navigationBar {
+        top:110px;
+        left: 460px;
+    }
+    
+    div.contentLeft {
+        top: 336px;
+        float: left;
+        left: 460px;
+    }
+    
+    div.contentCenter {
+        left: 450px;
+    }
+}
