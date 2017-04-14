@@ -191,6 +191,9 @@ ul {
     }
     
     div.contentCenter {
-        left: 450px;
+        float:left;
+        left:460px;
+        width: 50%;
+        --margin: 0 auto;
     }
 }
