@@ -35,18 +35,13 @@ body.etusivu a.etusivu, body.lomake a.lomake, body.taulukko a.taulukko {
     position:absolute;
 }
 
-.left {
-    position: relative;
-    text-align: left;
-    width: 500px;
-    left: 50px;
-}
-
-.right {
-    position: relative;
-    text-align: right;
-    width: 500px;
-    left: 700px;
+.hamburgerIcon {
+    top: 25px;
+    left: 40px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    visibility: collapse;
 }
 
 .contentLeft {
@@ -122,7 +117,12 @@ ul {
     padding: 0;
 }
 
-@media screen and (max-width: 912px) {
+#hiddenNavBar {
+    display: none;
+    padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 912px) {
     body.etusivu a.etusivu, body.lomake a.lomake, body.taulukko a.taulukko {
         background-color: lightgray;
         color: #900;
@@ -139,7 +139,7 @@ ul {
     a.navigationBarLinks {
         display:block;
         float:none;
-        width:200px;
+        width:100%;
         text-align:left;
         color: #900;
         background-color: white;
@@ -182,6 +182,7 @@ ul {
     div.navigationBar {
         top:110px;
         left: 460px;
+        width: 200px;
     }
     
     div.contentLeft {
@@ -195,11 +196,17 @@ ul {
         left:460px;
         width: 60vw;
     }
+    
+    #hiddenNavBar {
+        display: none;
+    }
 }
 
-@media screen and (max-width: 640px) {
+@media only screen and (max-width: 640px) {
     h1 {
         font-size: 35px;
+        left: 130px;
+        position: absolute;
     }
     
     div.contentLeft {
@@ -215,6 +222,10 @@ ul {
     
     div.navigationBar {
         visibility: collapse;
+    }
+    
+    div.hamburgerIcon {
+        visibility: visible;
     }
     
 }

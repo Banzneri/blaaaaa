@@ -3,8 +3,12 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta id="viewport" name="viewport" content ="width=device-width" />
         <link rel="stylesheet" type="text/css" href="css.css" />
         <link href="//fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+        
+        <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+
         <title>Kissasivu</title>
     </head>
     
@@ -12,6 +16,11 @@
     <body class="etusivu">
     
         <div class="redBar" />
+    
+        <div class="hamburgerIcon">
+            <button onclick="myFunction()" style="background-color: transparent"><span class="fa fa-bars fa-2x" aria-hidden="true" style="color: white"></span></button>
+        </div>
+            
         <h1>EX NIHILO NIHIL FIT</h1>
         
         <div class="navigationBar">
@@ -44,7 +53,20 @@
             </div>
             
             <div class="contentCenter">
+                <div id="hiddenNavBar">
+                    <ul>
+                        <li><a href="index.html" class="navigationBarLinks etusivu">Etusivu</a></li>
+                        <li><a href="lomake.html" class="navigationBarLinks lomake">Lomake</a></li>
+                        <li><a href="taulukko.html" class="navigationBarLinks taulukko">Taulukko</a></li>
+                        <li><a href="#" class="navigationBarLinks">Laudantium</a></li>
+                        <li><a target="#" class="navigationBarLinks">Quisque</a></li>
+                        <li><a target="#" class="navigationBarLinks">Venenatis</a></li>
+                        <li><a target="#" class="navigationBarLinks">Dignissim</a></li>
+                        <li><a target="#" class="navigationBarLinks">Ultrices</a></li>
+                    </ul>
+                </div>
                 <h2>Etusivu</h2>
+                
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis risus libero, 
                     efficitur ac mi in, consectetur varius eros. Fusce tristique lacus nec sapien 
@@ -93,6 +115,24 @@
                 </p>
             </div>
         </div>
+        
+        <script>
+            function myFunction() {
+                var x = document.getElementById('hiddenNavBar');
+                if (x.style.display == 'block') {
+                    x.style.display = 'none';
+                } else {
+                    x.style.display = 'block';
+                }
+            }
+        </script>
+        
+        <script>
+        window.addEventListener('resize', function(event){
+            var x = document.getElementById('hiddenNavBar');
+            x.style.display = 'none';
+        });
+        </script>
         
     </body>
     
