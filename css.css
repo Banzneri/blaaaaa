@@ -193,7 +193,28 @@ ul {
     div.contentCenter {
         float:left;
         left:460px;
-        width: 50%;
-        --margin: 0 auto;
+        width: 60vw;
     }
+}
+
+@media screen and (max-width: 640px) {
+    h1 {
+        font-size: 35px;
+    }
+    
+    div.contentLeft {
+        visibility: collapse;
+    }
+    
+    div.contentCenter {
+        border-left-style: none;
+        left: 230px;
+        width: 90vw;
+        
+    }
+    
+    div.navigationBar {
+        visibility: collapse;
+    }
+    
 }
