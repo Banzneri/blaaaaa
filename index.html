@@ -128,9 +128,13 @@
         </script>
         
         <script>
+        var width = $(window).width(), height = $(window).height();
+            
         window.addEventListener('resize', function(event){
             var x = document.getElementById('hiddenNavBar');
-            x.style.display = 'none';
+            if($(window).width() != width && $(window).height() != height){
+                x.style.display = 'none';
+            }
         });
         </script>
         
