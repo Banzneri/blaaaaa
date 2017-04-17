@@ -112,11 +112,10 @@
         </script>
         
         <script>
-        var width = $(window).width(), height = $(window).height();
-            
+        var width = window.innerWidth;
         window.addEventListener('resize', function(event){
             var x = document.getElementById('hiddenNavBar');
-            if($(window).width() != width && $(window).height() != height){
+            if(window.innerWidth != width){
                 x.style.display = 'none';
             }
         });
