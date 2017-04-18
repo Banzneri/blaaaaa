@@ -8,7 +8,7 @@
         <link href="//fonts.googleapis.com/css?family=Muli" rel="stylesheet">
         <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
         
-        <title>Kissasivu</title>
+        <title>EX NIHILO NIHIL FIT</title>
     </head>
     
     
@@ -55,48 +55,72 @@
                         <li><a href="lomake.html" class="navigationBarLinks lomake">Lomake</a></li>
                         <li><a href="taulukko.html" class="navigationBarLinks taulukko">Taulukko</a></li>
                         <li><a href="#" class="navigationBarLinks">Laudantium</a></li>
-                        <li><a target="#" class="navigationBarLinks">Quisque</a></li>
-                        <li><a target="#" class="navigationBarLinks">Venenatis</a></li>
-                        <li><a target="#" class="navigationBarLinks">Dignissim</a></li>
-                        <li><a target="#" class="navigationBarLinks">Ultrices</a></li>
+                        <li><a href="#" class="navigationBarLinks">Quisque</a></li>
+                        <li><a href="#" class="navigationBarLinks">Venenatis</a></li>
+                        <li><a href="#" class="navigationBarLinks">Dignissim</a></li>
+                        <li><a href="#" class="navigationBarLinks">Ultrices</a></li>
                     </ul>
                 </div>
                 <h2>Lomake</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis risus libero, 
-                    efficitur ac mi in, consectetur varius eros. Fusce tristique lacus nec sapien 
-                    scelerisque, non varius ante porttitor. Mauris eget ex in orci porta pulvinar. 
-                    Sed sodales dignissim porta. Mauris tincidunt feugiat interdum. Ut non gravida 
-                    libero. Mauris dapibus mi in risus porta, vel convallis nisl congue. Nam eleifend 
-                    arcu eu nulla hendrerit, sit amet sagittis turpis accumsan. Mauris ut sapien 
-                    eget ex fermentum pellentesque vitae sed lectus. Nunc tristique sapien id mi 
-                    lacinia, sed semper justo facilisis. In bibendum ex eu pulvinar laoreet. Sed quis 
-                    tincidunt erat. Mauris efficitur commodo ante, ut imperdiet enim. Vestibulum 
-                    viverra orci in turpis sollicitudin, fringilla hendrerit dui fringilla. 
-                    <br><br>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis risus libero, 
-                    efficitur ac mi in, consectetur varius eros. Fusce tristique lacus nec sapien 
-                    scelerisque, non varius ante porttitor. Mauris eget ex in orci porta pulvinar. 
-                    Sed sodales dignissim porta. Mauris tincidunt feugiat interdum. Ut non gravida 
-                    libero. Mauris dapibus mi in risus porta, vel convallis nisl congue. Nam eleifend 
-                    arcu eu nulla hendrerit, sit amet sagittis turpis accumsan. Mauris ut sapien 
-                    eget ex fermentum pellentesque vitae sed lectus. Nunc tristique sapien id mi 
-                    lacinia, sed semper justo facilisis. In bibendum ex eu pulvinar laoreet. Sed quis 
-                    tincidunt erat. Mauris efficitur commodo ante, ut imperdiet enim. Vestibulum 
-                    viverra orci in turpis sollicitudin, fringilla hendrerit dui fringilla. 
-                    <br><br>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis risus libero, 
-                    efficitur ac mi in, consectetur varius eros. Fusce tristique lacus nec sapien 
-                    scelerisque, non varius ante porttitor. Mauris eget ex in orci porta pulvinar. 
-                    Sed sodales dignissim porta. Mauris tincidunt feugiat interdum. Ut non gravida 
-                    libero. Mauris dapibus mi in risus porta, vel convallis nisl congue. Nam eleifend 
-                    arcu eu nulla hendrerit, sit amet sagittis turpis accumsan. Mauris ut sapien 
-                    eget ex fermentum pellentesque vitae sed lectus. Nunc tristique sapien id mi 
-                    lacinia, sed semper justo facilisis. In bibendum ex eu pulvinar laoreet. Sed quis 
-                    tincidunt erat. Mauris efficitur commodo ante, ut imperdiet enim. Vestibulum 
-                    viverra orci in turpis sollicitudin, fringilla hendrerit dui fringilla. 
+                
+                <form name="lomake" action="" onsubmit="return validateForm()">
+                    <div id="lastNameWrapper">
+                        Sukunimesi:
+                        
+                        <div id="lastname" style="display: inline;">
+                            <input id="lastnameinput" type="name" name="sukunimi" style="margin-left: 10px" onkeyup="validateWhileTyping(this.value)">
+                        </div>
+                        
+                    </div>
+                
+                    <br>
                     
-                </p>
+                    <div id="sexWrapper" float: up;>
+                            <div id="sexText">Sukupuolesi:</div>
+
+                            <div id="sex">
+                                
+                                <input type="radio" name="sukupuoli" value="mies" onclick="changeColor()"> Mies<br>
+                                
+                                <input type="radio" name="sukupuoli" value="nainen" onclick="changeColor()"> Nainen<br>
+                                
+                                <input type="radio" name="sukupuoli" value="other" onclick="changeColor()"> En halua sanoa
+                                
+                            </div>
+                        
+                    </div>
+                
+                    <br><br> 
+                    
+                    <div id="carWrapper">
+                    
+                        <div id="carText" style="display: inline;">Autosi:</div>
+                        
+                        <div id="car" style="margin-left: 35px">
+                            
+                            <select id="auto" style="margin-left: 5px" onchange="showField(this.options[this.selectedIndex].value)">
+                                <option value="">Valitse automerkkisi:</option>
+                                <option value="volvo">Lada</option>
+                                <option value="saab">Mosse</option>
+                                <option value="fiat">Volga</option>
+                                <option value="varthburg">Varthburg</option>
+                                <option value="ferrari">Ferrari</option>
+                                <option value="muu">Muu</option>
+                            </select>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div id="hiddenFormField" style="margin-left: 47px"></div>
+                    
+                    <br>
+                    
+                    <input type="submit" value="Submit" style="margin-left: 90px">
+                </form>
+                
+                
+                
             </div>
         </div>
         
@@ -121,6 +145,114 @@
         });
         </script>
         
-    </body>
+        <script>
+            function validateForm() {
+                var sukunimi = document.forms["lomake"]["sukunimi"].value;
+                var sukupuoli = document.forms["lomake"]["sukupuoli"].value;
+                var e = document.getElementById("auto");
+                var auto = e.options[e.selectedIndex].value;
+                
+                if (sukunimi.length < 3) {
+                    var lastname = document.getElementById('lastnameinput');
+                    setInvalidElement(lastname);
+                }
+                
+                if(!atLeastOneRadio()) {
+                    var sex = document.getElementById('sex');
+                    setInvalidElement(sex);
+                }
+                
+                if(auto.length == 0) {
+                    var car = document.getElementById('auto');
+                    setInvalidElement(car);
+                }
+                
+                return !(sukunimi.length < 3 || !atLeastOneRadio() || auto.length == 0);
+            }
+        </script>
+        
+        <script>
+            function showField(name){
+                
+                if(name!= '') {
+                    var car = document.getElementById('auto');
+                    setValidElement(car);
+                }
+                
+                if(name == '') {
+                    var car = document.getElementById('auto');
+                    setInvalidElement(car);
+                }
+                
+                if(name=='muu') {
+                    document.getElementById('hiddenFormField').innerHTML='Muu:    <input type="text" name="muu" style="margin-left: 4px" />';
+                } else {
+                    document.getElementById('hiddenFormField').innerHTML='';
+                }
+            }
+        </script>
+        
+        <script>
+            function atLeastOneRadio() {
+                var radios = document.getElementsByTagName('input');
+                var value;
+                
+                for (var i = 0; i < radios.length; i++) {
+                    if (radios[i].type === 'radio' && radios[i].checked) {
+                        value = radios[i].value;
+                        return true;
+                    }
+                }
+                
+                return false;
+            }
+        </script>
+
+        <script>
+        
+        function validateWhileTyping(name) {
+            
+            if(name.length >= 3) {
+                var lastname = document.getElementById('lastnameinput');
+                setValidElement(lastname);
+            }
+        }
+            
+        </script>
+        
+        <script>
+        
+        function changeColor() {
+            var sex = document.getElementById('sex');
+            sex.style.backgroundColor = 'white';
+            sex.style.borderStyle = 'none';
+        }
+        
+        </script>
+        
+        
+        <script>
+        
+        function setInvalidElement(element) {
+            element.style.backgroundColor = 'yellow';
+            element.style.borderStyle = 'solid';
+            element.style.borderColor = '#900';
+            element.style.borderWidth = '1px';
+        }
+        
+        </script>
+        
+        <script>
+        
+        function setValidElement(element) {
+            element.style.backgroundColor = 'white';
+            element.style.borderStyle = 'solid';
+            element.style.borderColor = 'black';
+            element.style.borderWidth = '1px';
+        }
+        
+        </script>
+        
+        </body>
     
 </html>
