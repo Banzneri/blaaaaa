@@ -125,6 +125,15 @@
         </div>
         
         <script>
+
+            var width = window.innerWidth;
+            window.addEventListener('resize', function(event){
+                var x = document.getElementById('hiddenNavBar');
+                if(window.innerWidth != width){
+                    x.style.display = 'none';
+                }
+            });
+            
             function myFunction() {
                 var x = document.getElementById('hiddenNavBar');
                 if (x.style.display == 'block') {
@@ -133,19 +142,7 @@
                     x.style.display = 'block';
                 }
             }
-        </script>
-        
-        <script>
-        var width = window.innerWidth;
-        window.addEventListener('resize', function(event){
-            var x = document.getElementById('hiddenNavBar');
-            if(window.innerWidth != width){
-                x.style.display = 'none';
-            }
-        });
-        </script>
-        
-        <script>
+            
             function validateForm() {
                 var sukunimi = document.forms["lomake"]["sukunimi"].value;
                 var sukupuoli = document.forms["lomake"]["sukupuoli"].value;
@@ -167,11 +164,16 @@
                     setInvalidElement(car);
                 }
                 
-                return !(sukunimi.length < 3 || !atLeastOneRadio() || auto.length == 0);
+                if(sukunimi.length >= 3 && atLeastOneRadio() && auto.length > 0) {
+                    alert('Form was successfully sent.');
+                    return true;
+                }
+                
+                return false;
+
+                
             }
-        </script>
         
-        <script>
             function showField(name){
                 
                 if(name!= '') {
@@ -190,9 +192,7 @@
                     document.getElementById('hiddenFormField').innerHTML='';
                 }
             }
-        </script>
-        
-        <script>
+
             function atLeastOneRadio() {
                 var radios = document.getElementsByTagName('input');
                 var value;
@@ -206,50 +206,34 @@
                 
                 return false;
             }
-        </script>
+        
+            function validateWhileTyping(name) {
 
-        <script>
-        
-        function validateWhileTyping(name) {
-            
-            if(name.length >= 3) {
-                var lastname = document.getElementById('lastnameinput');
-                setValidElement(lastname);
+                if(name.length >= 3) {
+                    var lastname = document.getElementById('lastnameinput');
+                    setValidElement(lastname);
+                }
             }
-        }
-            
-        </script>
-        
-        <script>
-        
-        function changeColor() {
-            var sex = document.getElementById('sex');
-            sex.style.backgroundColor = 'white';
-            sex.style.borderStyle = 'none';
-        }
-        
-        </script>
-        
-        
-        <script>
-        
-        function setInvalidElement(element) {
-            element.style.backgroundColor = 'yellow';
-            element.style.borderStyle = 'solid';
-            element.style.borderColor = '#900';
-            element.style.borderWidth = '1px';
-        }
-        
-        </script>
-        
-        <script>
-        
-        function setValidElement(element) {
-            element.style.backgroundColor = 'white';
-            element.style.borderStyle = 'solid';
-            element.style.borderColor = 'black';
-            element.style.borderWidth = '1px';
-        }
+
+            function changeColor() {
+                var sex = document.getElementById('sex');
+                sex.style.backgroundColor = 'white';
+                sex.style.borderStyle = 'none';
+            }
+
+            function setInvalidElement(element) {
+                element.style.backgroundColor = 'yellow';
+                element.style.borderStyle = 'solid';
+                element.style.borderColor = '#900';
+                element.style.borderWidth = '1px';
+            }
+
+            function setValidElement(element) {
+                element.style.backgroundColor = 'white';
+                element.style.borderStyle = 'solid';
+                element.style.borderColor = 'black';
+                element.style.borderWidth = '1px';
+            }
         
         </script>
         
