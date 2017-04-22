@@ -1,5 +1,15 @@
-body {
+html, body {
+    top: 0px;
+    min-height:100%;
+    width: 100%;
     background-color: white;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: visible;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 h1 {
@@ -17,6 +27,14 @@ h2 {
     margin-top:0;
 }
 
+.image {
+    display: inline;
+    width: 400px;
+    height: 250px;
+    float: right;
+    padding-left: 5px;
+}
+
 body.etusivu a.etusivu, body.lomake a.lomake, body.taulukko a.taulukko {
     background-color: white;
     color: orange;
@@ -32,8 +50,20 @@ body.etusivu a.etusivu, body.lomake a.lomake, body.taulukko a.taulukko {
     width: 100%;
     height: 106px;
     background-color: #c00;
-    position:absolute;
+    position:relative;
+    display: inline-block;
 }
+
+.mainContent {
+    position: relative;
+    display: inline-block;
+    width: 960px;
+    min-height: 100%;
+    left: 50%;
+    margin-left: -450px;
+    padding-top: 10px;
+}
+
 
 .hamburgerIcon {
     top: 25px;
@@ -41,31 +71,42 @@ body.etusivu a.etusivu, body.lomake a.lomake, body.taulukko a.taulukko {
     width: 50px;
     height: 50px;
     position: absolute;
-    visibility: collapse;
+    display: none;
+}
+
+.contentCenter {
+    position: relative;
+    float: right;
+    top:10px;
+    width: 700px;
+    border-left-style: dotted;
+    border-left-color: orange;
+    padding-left: 30px;
+    padding-right: 20px;
+    text-align:justify;
 }
 
 .contentLeft {
-    position: absolute;
-    left: 50%;
-    top:100px;
-    margin-left: -450px;
+    float: left;
+    display: block;
+    position: relative;
     width: 200px;
     height: 500px;
     
 }
 
-.contentCenter {
-    position:absolute;
-    left:50%;
-    top:120px;
-    margin-left: -230px;
-    width: 700px;
-    border-left-style: dotted;
-    border-left-color: orange;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align:justify;
-    
+.footer {
+    position: relative;
+    border-top-style: dotted;
+    border-top-color: orange;
+    bottom: 0;
+    height: 300px;
+    width: 100%;
+    background-color: lightgrey;
+}
+
+#topPage {
+    padding: none;
 }
 
 .navigationBarLinks {
@@ -105,16 +146,43 @@ a.navigationBarLinks:active {
 }
 
 .navigationBar {
-    position: absolute;
+    position: relative;
     left: 50%;
     margin-left: -450px;
     width: 900px;
 }
 
-ul {
+.navBarList {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.footerList {
+    position: relative;
+    list-style-type: none;
+    display: inline-block;
+}
+
+.footerLinkDiv{
+    display: table;
+    margin: 0 auto;
+}
+
+.footerLink {
+    display: block;
+    border-bottom: dotted black 1px;
+    border-top: dotted black 1px;
+    text-decoration: none;
+    color: #900;
+}
+
+.sideBar {
+    display: none;
+}
+
+.text {
+    --width:60vw;
 }
 
 #sexWrapper {
@@ -158,7 +226,7 @@ input:invalid {
 
 
 
-@media only screen and (max-width: 912px) {
+@media screen and (max-width: 912px) {
     body.etusivu a.etusivu, body.lomake a.lomake, body.taulukko a.taulukko {
         background-color: lightgray;
         color: #900;
@@ -191,6 +259,16 @@ input:invalid {
         
     }
     
+    .image {
+        display: none;
+    }
+
+    div.mainContent {
+        width: 100%;
+        min-height: 800px;
+        left: 460px;
+    }
+    
     a.navigationBarLinks:hover {
         background-color: lightgray;
         color: #900;
@@ -215,22 +293,29 @@ input:invalid {
         
     }
     
-    div.navigationBar {
-        top:110px;
-        left: 460px;
+    .sideBar {
+        display: inline;
+        left: 0px;
         width: 200px;
     }
     
-    div.contentLeft {
-        top: 336px;
-        float: left;
-        left: 460px;
+    .topBar {
+        display: none;
     }
     
+    div.contentLeft {
+        position: absolute;
+        top: 0px;
+        left: 6px;
+        float: none;
+        padding-right: 10px;
+    }
+    
+    
     div.contentCenter {
-        float:left;
-        left:460px;
-        width: 60vw;
+        float: none;
+        left: 220px;
+        width: 60%;
     }
     
     #hiddenNavBar {
@@ -238,7 +323,7 @@ input:invalid {
     }
 }
 
-@media only screen and (max-width: 640px) {
+@media screen and (max-width: 640px) {
     h1 {
         font-size: 30px;
         left: 70px;
@@ -246,13 +331,29 @@ input:invalid {
     }
     
     div.contentLeft {
-        visibility: collapse;
+        display: none;
+    }
+    
+    .image {
+        display: block;
+        float: none;
+        padding-bottom: 10px;
+        margin: 0 auto;
+        overflow: auto;
+    }
+    
+    .mainContent {
+        position: relative;
+        display: block;
+        left: -20px;
+        width: 90%;
     }
     
     div.contentCenter {
+        position: relative;
         border-left-style: none;
-        left: 230px;
-        width: 90vw;
+        left: -20px;
+        width: 90%;
         
     }
     
@@ -261,7 +362,47 @@ input:invalid {
     }
     
     div.hamburgerIcon {
-        visibility: visible;
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+    .footer {
+        height: 400px;
+    }
+    
+    .last {
+        position: absolute;
+        left: 50%;
+        margin-left: -90px;
+        bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .image {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 364px) {
+    .footer {
+        height: 650px;
+    }
+    
+    .last {
+        position: relative;
+        left: 0px;
+        margin-left: 0px;
+    }
+    
+    .footerLinkDiv {
+        position: relative;
+        left: 20%;
+        display: block;
+        margin: 0px;
     }
     
 }

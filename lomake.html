@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang=en>
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta id="viewport" name="viewport" content ="width=device-width" />
         <link rel="stylesheet" type="text/css" href="css.css" />
         <link href="//fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-        <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
         
         <title>EX NIHILO NIHIL FIT</title>
     </head>
@@ -14,22 +14,25 @@
     
     <body class="lomake">
     
-        <div class="redBar" />
-        <h1>EX NIHILO NIHIL FIT</h1>
-        
-        <div class="hamburgerIcon">
-            <button onclick="myFunction()" style="background-color: transparent"><span class="fa fa-bars fa-2x" aria-hidden="true" style="color: white"></span></button>
-        </div>
-        
-        <div class="navigationBar">
-            <a href="index.html" class="navigationBarLinks etusivu">Etusivu</a>
-            <a href="lomake.html" class="navigationBarLinks lomake">Lomake</a>
-            <a href="taulukko.html" class="navigationBarLinks taulukko">Taulukko</a>
-            <a href="#" class="navigationBarLinks">Laudantium</a>
-            <a href="#" class="navigationBarLinks">Quisque</a>
-            <a href="#" class="navigationBarLinks">Venenatis</a>
-            <a href="#" class="navigationBarLinks">Dignissim</a>
-            <a href="#" class="navigationBarLinks">Ultrices</a>
+        <div id='topPage'>
+            <div class="redBar" >
+                <h1>EX NIHILO NIHIL FIT</h1>
+            </div>
+
+            <div class="hamburgerIcon">
+                <button onclick="myFunction()" style="background-color: transparent"><span class="fa fa-bars fa-2x" aria-hidden="true" style="color: white"></span></button>
+            </div>
+
+            <div class="navigationBar">
+                <a href="index.html" class="navigationBarLinks etusivu">Etusivu</a>
+                <a href="lomake.html" class="navigationBarLinks lomake">Lomake</a>
+                <a href="taulukko.html" class="navigationBarLinks taulukko">Taulukko</a>
+                <a href="#" class="navigationBarLinks">Laudantium</a>
+                <a href="#" class="navigationBarLinks">Quisque</a>
+                <a href="#" class="navigationBarLinks">Venenatis</a>
+                <a href="#" class="navigationBarLinks">Dignissim</a>
+                <a href="#" class="navigationBarLinks">Ultrices</a>
+            </div>
         </div>
         
         <div>
@@ -63,19 +66,19 @@
                 </div>
                 <h2>Lomake</h2>
                 
-                <form name="lomake" action="" onsubmit="return validateForm()">
+                <form name="lomake" onsubmit="return validateForm()">
                     <div id="lastNameWrapper">
                         Sukunimesi:
                         
                         <div id="lastname" style="display: inline;">
-                            <input id="lastnameinput" type="name" name="sukunimi" style="margin-left: 10px" onkeyup="validateWhileTyping(this.value)">
+                            <input id="lastnameinput" type="text" name="sukunimi" style="margin-left: 10px" onkeyup="validateWhileTyping(this.value)">
                         </div>
                         
                     </div>
                 
                     <br>
                     
-                    <div id="sexWrapper" float: up;>
+                    <div id="sexWrapper">
                             <div id="sexText">Sukupuolesi:</div>
 
                             <div id="sex">

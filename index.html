@@ -7,66 +7,102 @@
         <link rel="stylesheet" type="text/css" href="css.css" />
         <link href="//fonts.googleapis.com/css?family=Muli" rel="stylesheet">
         
-        <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 
         <title>Kissasivu</title>
     </head>
     
     
     <body class="etusivu">
-    
-        <div class="redBar" />
-    
         <div class="hamburgerIcon">
-            <button onclick="myFunction()" style="background-color: transparent"><span class="fa fa-bars fa-2x" aria-hidden="true" style="color: white"></span></button>
-        </div>
-            
-        <h1>EX NIHILO NIHIL FIT</h1>
-        
-        <div class="navigationBar">
-        <ul>
-            <li><a href="index.html" class="navigationBarLinks etusivu">Etusivu</a></li>
-            <li><a href="lomake.html" class="navigationBarLinks lomake">Lomake</a></li>
-            <li><a href="taulukko.html" class="navigationBarLinks taulukko">Taulukko</a></li>
-            <li><a href="#" class="navigationBarLinks">Laudantium</a></li>
-            <li><a href="#" class="navigationBarLinks">Quisque</a></li>
-            <li><a href="#" class="navigationBarLinks">Venenatis</a></li>
-            <li><a href="#" class="navigationBarLinks">Dignissim</a></li>
-            <li><a href="#" class="navigationBarLinks">Ultrices</a></li>
-        </ul>
-        </div>
-        
-        <div>
-            <div class="contentLeft">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis risus libero, 
-                    efficitur ac mi in, consectetur varius eros. Fusce tristique lacus nec sapien 
-                    scelerisque, non varius ante porttitor. Mauris eget ex in orci porta pulvinar. 
-                    Sed sodales dignissim porta. Mauris tincidunt feugiat interdum. Ut non gravida 
-                    libero. Mauris dapibus mi in risus porta, vel convallis nisl congue. Nam eleifend 
-                    arcu eu nulla hendrerit, sit amet sagittis turpis accumsan. Mauris ut sapien 
-                    eget ex fermentum pellentesque vitae sed lectus. Nunc tristique sapien id mi 
-                    lacinia, sed semper justo facilisis. In bibendum ex eu pulvinar laoreet. Sed quis 
-                    tincidunt erat. Mauris efficitur commodo ante, ut imperdiet enim. Vestibulum 
-                    viverra orci in turpis sollicitudin, fringilla hendrerit dui fringilla. 
-                </p>
+                <button onclick="myFunction()" style="background-color: transparent"><span class="fa fa-bars fa-2x" aria-hidden="true" style="color: white"></span></button>
             </div>
+        <div class='redBar'>
+            <div class="hamburgerIcon">
+                <button onclick="myFunction()" style="background-color: transparent"><span class="fa fa-bars fa-2x" aria-hidden="true" style="color: white"></span></button>
+            </div>
+            <h1>EX NIHILO NIHIL FIT</h1>
+
+            <div class="navigationBar topBar">
+                <a href="index.html" class="navigationBarLinks etusivu">Etusivu</a>
+                <a href="lomake.html" class="navigationBarLinks lomake">Lomake</a>
+                <a href="taulukko.html" class="navigationBarLinks taulukko">Taulukko</a>
+                <a href="#" class="navigationBarLinks">Laudantium</a>
+                <a href="#" class="navigationBarLinks">Quisque</a>
+                <a href="#" class="navigationBarLinks">Venenatis</a>
+                <a href="#" class="navigationBarLinks">Dignissim</a>
+                <a href="#" class="navigationBarLinks">Ultrices</a>
+            </div>
+        </div>
+        
+        <div class="mainContent">
             
             <div class="contentCenter">
                 <div id="hiddenNavBar">
-                    <ul>
+                    <ul class="navBarList">
                         <li><a href="index.html" class="navigationBarLinks etusivu">Etusivu</a></li>
                         <li><a href="lomake.html" class="navigationBarLinks lomake">Lomake</a></li>
                         <li><a href="taulukko.html" class="navigationBarLinks taulukko">Taulukko</a></li>
                         <li><a href="#" class="navigationBarLinks">Laudantium</a></li>
-                        <li><a target="#" class="navigationBarLinks">Quisque</a></li>
-                        <li><a target="#" class="navigationBarLinks">Venenatis</a></li>
-                        <li><a target="#" class="navigationBarLinks">Dignissim</a></li>
-                        <li><a target="#" class="navigationBarLinks">Ultrices</a></li>
+                        <li><a href="#" class="navigationBarLinks">Quisque</a></li>
+                        <li><a href="#" class="navigationBarLinks">Venenatis</a></li>
+                        <li><a href="#" class="navigationBarLinks">Dignissim</a></li>
+                        <li><a href="#" class="navigationBarLinks">Ultrices</a></li>
                     </ul>
                 </div>
+                
                 <h2>Etusivu</h2>
                 
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis risus libero, 
+                    efficitur ac mi in, consectetur varius eros. Fusce tristique lacus nec sapien 
+                    scelerisque, non varius ante porttitor. Mauris eget ex in orci porta pulvinar. 
+                    Sed sodales dignissim porta. Mauris tincidunt feugiat interdum. Ut non gravida 
+                    libero. Mauris dapibus mi in risus porta, vel convallis nisl congue. Nam eleifend 
+                    arcu eu nulla hendrerit, sit amet sagittis turpis accumsan. Mauris ut sapien 
+                    eget ex fermentum pellentesque vitae sed lectus. Nunc tristique sapien id mi 
+                    lacinia, sed semper justo facilisis. In bibendum ex eu pulvinar laoreet. Sed quis 
+                    tincidunt erat. Mauris efficitur commodo ante, ut imperdiet enim. Vestibulum 
+                    viverra orci in turpis sollicitudin, fringilla hendrerit dui fringilla. 
+                </p>    
+                <p class="text">    
+                    <img class="image" src="verkkosivu-malli.PNG" alt="kuva"/>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis risus libero,
+                    efficitur ac mi in, consectetur varius eros. Fusce tristique lacus nec sapien 
+                    scelerisque, non varius ante porttitor. Mauris eget ex in orci porta pulvinar. 
+                    Sed sodales dignissim porta. Mauris tincidunt feugiat interdum. Ut non gravida 
+                    libero. Mauris dapibus mi in risus porta, vel convallis nisl congue. Nam eleifend 
+                    arcu eu nulla hendrerit, sit amet sagittis turpis accumsan. Mauris ut sapien 
+                    eget ex fermentum pellentesque vitae sed lectus. Nunc tristique sapien id mi 
+                    lacinia, sed semper justo facilisis. In bibendum ex eu pulvinar laoreet. Sed quis 
+                    tincidunt erat. Mauris efficitur commodo ante, ut imperdiet enim. Vestibulum 
+                    viverra orci in turpis sollicitudin, fringilla hendrerit dui fringilla.
+                </p>
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis risus libero, 
+                    efficitur ac mi in, consectetur varius eros. Fusce tristique lacus nec sapien 
+                    scelerisque, non varius ante porttitor. Mauris eget ex in orci porta pulvinar. 
+                    Sed sodales dignissim porta. Mauris tincidunt feugiat interdum. Ut non gravida 
+                    libero. Mauris dapibus mi in risus porta, vel convallis nisl congue. Nam eleifend 
+                    arcu eu nulla hendrerit, sit amet sagittis turpis accumsan. Mauris ut sapien 
+                    eget ex fermentum pellentesque vitae sed lectus. Nunc tristique sapien id mi 
+                    lacinia, sed semper justo facilisis. In bibendum ex eu pulvinar laoreet. Sed quis 
+                    tincidunt erat. Mauris efficitur commodo ante, ut imperdiet enim. Vestibulum 
+                    viverra orci in turpis sollicitudin, fringilla hendrerit dui fringilla. 
+                </p>
+            </div>
+        
+            <div class="contentLeft">
+                <div class="navigationBar sideBar">
+                    <a href="index.html" class="navigationBarLinks etusivu">Etusivu</a>
+                    <a href="lomake.html" class="navigationBarLinks lomake">Lomake</a>
+                    <a href="taulukko.html" class="navigationBarLinks taulukko">Taulukko</a>
+                    <a href="#" class="navigationBarLinks">Laudantium</a>
+                    <a href="#" class="navigationBarLinks">Quisque</a>
+                    <a href="#" class="navigationBarLinks">Venenatis</a>
+                    <a href="#" class="navigationBarLinks">Dignissim</a>
+                    <a href="#" class="navigationBarLinks">Ultrices</a>
+                </div>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis risus libero, 
                     efficitur ac mi in, consectetur varius eros. Fusce tristique lacus nec sapien 
@@ -78,43 +114,47 @@
                     lacinia, sed semper justo facilisis. In bibendum ex eu pulvinar laoreet. Sed quis 
                     tincidunt erat. Mauris efficitur commodo ante, ut imperdiet enim. Vestibulum 
                     viverra orci in turpis sollicitudin, fringilla hendrerit dui fringilla. 
-                    <br><br>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis risus libero, 
-                    efficitur ac mi in, consectetur varius eros. Fusce tristique lacus nec sapien 
-                    scelerisque, non varius ante porttitor. Mauris eget ex in orci porta pulvinar. 
-                    Sed sodales dignissim porta. Mauris tincidunt feugiat interdum. Ut non gravida 
-                    libero. Mauris dapibus mi in risus porta, vel convallis nisl congue. Nam eleifend 
-                    arcu eu nulla hendrerit, sit amet sagittis turpis accumsan. Mauris ut sapien 
-                    eget ex fermentum pellentesque vitae sed lectus. Nunc tristique sapien id mi 
-                    lacinia, sed semper justo facilisis. In bibendum ex eu pulvinar laoreet. Sed quis 
-                    tincidunt erat. Mauris efficitur commodo ante, ut imperdiet enim. Vestibulum 
-                    viverra orci in turpis sollicitudin, fringilla hendrerit dui fringilla. 
-                    <br><br>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis risus libero, 
-                    efficitur ac mi in, consectetur varius eros. Fusce tristique lacus nec sapien 
-                    scelerisque, non varius ante porttitor. Mauris eget ex in orci porta pulvinar. 
-                    Sed sodales dignissim porta. Mauris tincidunt feugiat interdum. Ut non gravida 
-                    libero. Mauris dapibus mi in risus porta, vel convallis nisl congue. Nam eleifend 
-                    arcu eu nulla hendrerit, sit amet sagittis turpis accumsan. Mauris ut sapien 
-                    eget ex fermentum pellentesque vitae sed lectus. Nunc tristique sapien id mi 
-                    lacinia, sed semper justo facilisis. In bibendum ex eu pulvinar laoreet. Sed quis 
-                    tincidunt erat. Mauris efficitur commodo ante, ut imperdiet enim. Vestibulum 
-                    viverra orci in turpis sollicitudin, fringilla hendrerit dui fringilla. 
-                    <br><br>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis risus libero, 
-                    efficitur ac mi in, consectetur varius eros. Fusce tristique lacus nec sapien 
-                    scelerisque, non varius ante porttitor. Mauris eget ex in orci porta pulvinar. 
-                    Sed sodales dignissim porta. Mauris tincidunt feugiat interdum. Ut non gravida 
-                    libero. Mauris dapibus mi in risus porta, vel convallis nisl congue. Nam eleifend 
-                    arcu eu nulla hendrerit, sit amet sagittis turpis accumsan. Mauris ut sapien 
-                    eget ex fermentum pellentesque vitae sed lectus. Nunc tristique sapien id mi 
-                    lacinia, sed semper justo facilisis. In bibendum ex eu pulvinar laoreet. Sed quis 
-                    tincidunt erat. Mauris efficitur commodo ante, ut imperdiet enim. Vestibulum 
-                    viverra orci in turpis sollicitudin, fringilla hendrerit dui fringilla. 
-                    
                 </p>
             </div>
         </div>
+    <br><br>
+        <div class="footer">
+            <div class="footerLinkDiv">
+                <ul class="footerList first">
+                    <li><a class="footerLink" href="#">1 Cras metus</a></li>
+                    <li><a class="footerLink" href="#">1 Sed aliquet risus</a></li>
+                    <li><a class="footerLink"  href="#">1 Integer id quam</a></li>
+                    <li><a class="footerLink" href="#">1 Morbi mi</a></li>
+                    <li><a class="footerLink" href="#">1 Quisque nisl felis</a></li>
+                    <li><a class="footerLink" href="#">1 Venenatis tristique</a></li>
+                    <li><a class="footerLink" href="#">1 Dignissim in</a></li>
+                    <li><a class="footerLink" href="#">1 Ultrices sit amet</a></li>
+                </ul>
+                
+                <ul class="footerList second">
+                    <li><a class="footerLink" href="#">2 Cras metus</a></li>
+                    <li><a class="footerLink" href="#">2 Sed aliquet risus</a></li>
+                    <li><a class="footerLink" href="#">2 Integer id quam</a></li>
+                    <li><a class="footerLink" href="#">2 Morbi mi</a></li>
+                    <li><a class="footerLink" href="#">2 Quisque nisl felis</a></li>
+                    <li><a class="footerLink" href="#">2 Venenatis tristique</a></li>
+                    <li><a class="footerLink" href="#">2 Dignissim in</a></li>
+                    <li><a class="footerLink" href="#">2 Ultrices sit amet</a></li>
+                </ul>
+                
+                <ul class="footerList last">
+                    <li><a class="footerLink" href="#">3 Cras metus</a></li>
+                    <li><a class="footerLink" href="#">3 Sed aliquet risus</a></li>
+                    <li><a class="footerLink" href="#">3 Integer id quam</a></li>
+                    <li><a class="footerLink" href="#">3 Morbi mi</a></li>
+                    <li><a class="footerLink" href="#">3 Quisque nisl felis</a></li>
+                    <li><a class="footerLink" href="#">3 Venenatis tristique</a></li>
+                    <li><a class="footerLink" href="#">3 Dignissim in</a></li>
+                    <li><a class="footerLink" href="#">3 Ultrices sit amet</a></li>
+                </ul>
+            </div>
+        </div>
+    
         
         <script>
             function myFunction() {
