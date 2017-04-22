@@ -5,11 +5,6 @@ html, body {
     background-color: white;
     margin: 0px;
     padding: 0px;
-    overflow-y: visible;
-}
-
-html {
-    overflow-x: hidden;
 }
 
 h1 {
@@ -266,7 +261,7 @@ input:invalid {
     div.mainContent {
         width: 100%;
         min-height: 800px;
-        left: 460px;
+        left: 450px;
     }
     
     a.navigationBarLinks:hover {
@@ -308,14 +303,14 @@ input:invalid {
         top: 0px;
         left: 6px;
         float: none;
-        padding-right: 10px;
+        padding-left: 4px;
     }
     
     
     div.contentCenter {
         float: none;
         left: 220px;
-        width: 60%;
+        width: 55vw;
     }
     
     #hiddenNavBar {
@@ -343,16 +338,13 @@ input:invalid {
     }
     
     .mainContent {
-        position: relative;
         display: block;
-        left: -20px;
-        width: 90%;
     }
     
     div.contentCenter {
-        position: relative;
         border-left-style: none;
-        left: -20px;
+        left: 0px;
+        padding: 10px;
         width: 90%;
         
     }
