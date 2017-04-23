@@ -38,15 +38,26 @@
         <div class="mainContent">
             
             <div class="contentCenter">
-                
-		      <h2>Lomake</h2>
+                <div id="hiddenNavBar">
+                    <ul class="navBarList">
+                        <li><a href="index.html" class="navigationBarLinks etusivu">Etusivu</a></li>
+                        <li><a href="lomake.html" class="navigationBarLinks lomake">Lomake</a></li>
+                        <li><a href="taulukko.html" class="navigationBarLinks taulukko">Taulukko</a></li>
+                        <li><a href="#" class="navigationBarLinks">Laudantium</a></li>
+                        <li><a href="#" class="navigationBarLinks">Quisque</a></li>
+                        <li><a href="#" class="navigationBarLinks">Venenatis</a></li>
+                        <li><a href="#" class="navigationBarLinks">Dignissim</a></li>
+                        <li><a href="#" class="navigationBarLinks">Ultrices</a></li>
+                    </ul>
+                </div>
+                <h2>Lomake</h2>
                 
                 <form name="lomake" onsubmit="return validateForm()">
                     <div id="lastNameWrapper">
-                        <p>Sukunimesi:</p>
+                        <label for="lastname" class="formLabel">Sukunimesi:</label>
                         
                         <div id="lastname" style="display: inline;">
-                            <input id="lastnameinput" type="text" name="sukunimi" style="margin-left: 10px" onkeyup="validateWhileTyping(this.value)">
+                            <input id="lastnameinput" type="text" name="sukunimi" onkeyup="validateWhileTyping(this.value)">
                         </div>
                         
                     </div>
@@ -54,29 +65,27 @@
                     <br>
                     
                     <div id="sexWrapper">
-                            <div id="sexText"><p>Sukupuolesi:</p></div>
+                            <label for="sex" class="formLabel">Sukupuolesi:</label>
 
                             <div id="sex">
                                 
-                                <input type="radio" name="sukupuoli" value="mies" onclick="changeColor()"> Mies<br>
+                                <input type="radio" name="sukupuoli" id ="mies" value="mies" onclick="changeColor()"><label for="mies"> Mies</label><br>
                                 
-                                <input type="radio" name="sukupuoli" value="nainen" onclick="changeColor()"> Nainen<br>
+                                <input type="radio" name="sukupuoli" id ="nainen" value="nainen" onclick="changeColor()"><label for="nainen"> Nainen</label><br>
                                 
-                                <input type="radio" name="sukupuoli" value="other" onclick="changeColor()"> En halua sanoa
+                                <input type="radio" name="sukupuoli" id ="other" value="other" onclick="changeColor()"><label for="other"> En halua sanoa</label>
                                 
                             </div>
                         
                     </div>
                 
-                    <br><br> 
+                    <br>
                     
                     <div id="carWrapper">
-                    
-                        <div id="carText" style="display: inline;"><p>Autosi:</p></div>
                         
                         <div id="car">
-                            
-                            <select id="auto" style="margin-left: 5px" onchange="showField(this.options[this.selectedIndex].value)">
+                            <label for="auto" class="formLabel">Autosi:</label>
+                            <select id="auto" onchange="showField(this.options[this.selectedIndex].value)">
                                 <option value="">Valitse automerkkisi:</option>
                                 <option value="volvo">Lada</option>
                                 <option value="saab">Mosse</option>
@@ -90,11 +99,12 @@
                         
                     </div>
                     
-                    <div id="hiddenFormField" style="margin-left: 47px"></div>
+                    <br><br>
+                    <div id="hiddenFormField" name="muu"></div>
                     
                     <br>
                     
-                    <input type="submit" value="Submit" style="margin-left: 90px">
+                    <input id="submit" type="submit" value="Submit">
                 </form>
 
             </div>
@@ -200,13 +210,27 @@
                     setInvalidElement(car);
                 }
                 
-                if(sukunimi.length >= 3 && atLeastOneRadio() && auto.length > 0) {
+                if(sukunimi.length >= 3 && atLeastOneRadio() && validateOtherCar(auto)) {
                     alert('Form was successfully sent.');
                     return true;
                 }
                 
                 return false;
 
+                
+            }
+            
+            function validateOtherCar(car) {
+                if(car == 'muu') {
+                    var other = document.forms["lomake"]["muu"].value;
+                    if(other.length > 0) {
+                        return true;
+                    }
+                } else if(car.length > 0) {
+                    return true;
+                }
+                
+                return false;
                 
             }
         
