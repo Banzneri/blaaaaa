@@ -78,6 +78,9 @@ body.etusivu a.etusivu, body.lomake a.lomake, body.taulukko a.taulukko {
 }
 
 .contentCenter {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     position: relative;
     float: right;
     top:10px;
@@ -326,7 +329,7 @@ input:invalid {
     div.contentCenter {
         float: none;
         left: 220px;
-        width: 55vw;
+        width: 65%;
     }
     
     #hiddenNavBar {
@@ -361,7 +364,7 @@ input:invalid {
         border-left-style: none;
         left: 0px;
         margin: 0 auto;
-        width: 90%;
+        width: 100%;
         
     }
     
