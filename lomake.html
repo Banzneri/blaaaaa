@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang=en>
-
+<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta id="viewport" name="viewport" content ="width=device-width" />
+        <meta id="viewport" name="viewport" content ="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="css.css" />
-        <link href="//fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet"> 
         
-        <title>EX NIHILO NIHIL FIT</title>
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+        <title>Kissasivu</title>
     </head>
     
     
     <body class="lomake">
-    
-        <div id='topPage'>
-            <div class="redBar" >
-                <h1>EX NIHILO NIHIL FIT</h1>
-            </div>
-
+        <div class="hamburgerIcon">
+                <button onclick="myFunction()" style="background-color: transparent"><span class="fa fa-bars fa-2x" aria-hidden="true" style="color: white"></span></button>
+        </div>
+        <div class='redBar'>
             <div class="hamburgerIcon">
                 <button onclick="myFunction()" style="background-color: transparent"><span class="fa fa-bars fa-2x" aria-hidden="true" style="color: white"></span></button>
             </div>
+            <h1>EX NIHILO NIHIL FIT</h1>
 
-            <div class="navigationBar">
+            <div class="navigationBar topBar">
                 <a href="index.html" class="navigationBarLinks etusivu">Etusivu</a>
                 <a href="lomake.html" class="navigationBarLinks lomake">Lomake</a>
                 <a href="taulukko.html" class="navigationBarLinks taulukko">Taulukko</a>
@@ -35,40 +35,15 @@
             </div>
         </div>
         
-        <div>
-            <div class="contentLeft">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis risus libero, 
-                    efficitur ac mi in, consectetur varius eros. Fusce tristique lacus nec sapien 
-                    scelerisque, non varius ante porttitor. Mauris eget ex in orci porta pulvinar. 
-                    Sed sodales dignissim porta. Mauris tincidunt feugiat interdum. Ut non gravida 
-                    libero. Mauris dapibus mi in risus porta, vel convallis nisl congue. Nam eleifend 
-                    arcu eu nulla hendrerit, sit amet sagittis turpis accumsan. Mauris ut sapien 
-                    eget ex fermentum pellentesque vitae sed lectus. Nunc tristique sapien id mi 
-                    lacinia, sed semper justo facilisis. In bibendum ex eu pulvinar laoreet. Sed quis 
-                    tincidunt erat. Mauris efficitur commodo ante, ut imperdiet enim. Vestibulum 
-                    viverra orci in turpis sollicitudin, fringilla hendrerit dui fringilla. 
-                </p>
-            </div>
+        <div class="mainContent">
             
             <div class="contentCenter">
-                <div id="hiddenNavBar">
-                    <ul>
-                        <li><a href="index.html" class="navigationBarLinks etusivu">Etusivu</a></li>
-                        <li><a href="lomake.html" class="navigationBarLinks lomake">Lomake</a></li>
-                        <li><a href="taulukko.html" class="navigationBarLinks taulukko">Taulukko</a></li>
-                        <li><a href="#" class="navigationBarLinks">Laudantium</a></li>
-                        <li><a href="#" class="navigationBarLinks">Quisque</a></li>
-                        <li><a href="#" class="navigationBarLinks">Venenatis</a></li>
-                        <li><a href="#" class="navigationBarLinks">Dignissim</a></li>
-                        <li><a href="#" class="navigationBarLinks">Ultrices</a></li>
-                    </ul>
-                </div>
-                <h2>Lomake</h2>
+                
+		      <h2>Lomake</h2>
                 
                 <form name="lomake" onsubmit="return validateForm()">
                     <div id="lastNameWrapper">
-                        Sukunimesi:
+                        <p>Sukunimesi:</p>
                         
                         <div id="lastname" style="display: inline;">
                             <input id="lastnameinput" type="text" name="sukunimi" style="margin-left: 10px" onkeyup="validateWhileTyping(this.value)">
@@ -79,7 +54,7 @@
                     <br>
                     
                     <div id="sexWrapper">
-                            <div id="sexText">Sukupuolesi:</div>
+                            <div id="sexText"><p>Sukupuolesi:</p></div>
 
                             <div id="sex">
                                 
@@ -97,9 +72,9 @@
                     
                     <div id="carWrapper">
                     
-                        <div id="carText" style="display: inline;">Autosi:</div>
+                        <div id="carText" style="display: inline;"><p>Autosi:</p></div>
                         
-                        <div id="car" style="margin-left: 35px">
+                        <div id="car">
                             
                             <select id="auto" style="margin-left: 5px" onchange="showField(this.options[this.selectedIndex].value)">
                                 <option value="">Valitse automerkkisi:</option>
@@ -121,12 +96,70 @@
                     
                     <input type="submit" value="Submit" style="margin-left: 90px">
                 </form>
-                
-                
-                
+
+            </div>
+        
+            <div class="contentLeft">
+                <div class="navigationBar sideBar">
+                    <a href="index.html" class="navigationBarLinks etusivu">Etusivu</a>
+                    <a href="lomake.html" class="navigationBarLinks lomake">Lomake</a>
+                    <a href="taulukko.html" class="navigationBarLinks taulukko">Taulukko</a>
+                    <a href="#" class="navigationBarLinks">Laudantium</a>
+                    <a href="#" class="navigationBarLinks">Quisque</a>
+                    <a href="#" class="navigationBarLinks">Venenatis</a>
+                    <a href="#" class="navigationBarLinks">Dignissim</a>
+                    <a href="#" class="navigationBarLinks">Ultrices</a>
+                </div>
+                <p>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                    beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                    odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                    sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                    voluptatem?
+                </p>
             </div>
         </div>
         
+        <br><br>
+        
+        <div class="footer">
+            <div class="footerLinkDiv">
+                <ul class="footerList firstList">
+                    <li><a class="footerLink firstLink" href="#">1 Cras metus</a></li>
+                    <li><a class="footerLink" href="#">1 Sed aliquet risus</a></li>
+                    <li><a class="footerLink" href="#">1 Integer id quam</a></li>
+                    <li><a class="footerLink" href="#">1 Morbi mi</a></li>
+                    <li><a class="footerLink" href="#">1 Quisque nisl felis</a></li>
+                    <li><a class="footerLink" href="#">1 Venenatis tristique</a></li>
+                    <li><a class="footerLink" href="#">1 Dignissim in</a></li>
+                    <li><a class="footerLink" href="#">1 Ultrices sit amet</a></li>
+                </ul>
+                
+                <ul class="footerList secondList">
+                    <li><a class="footerLink firstLink" href="#">2 Cras metus</a></li>
+                    <li><a class="footerLink" href="#">2 Sed aliquet risus</a></li>
+                    <li><a class="footerLink" href="#">2 Integer id quam</a></li>
+                    <li><a class="footerLink" href="#">2 Morbi mi</a></li>
+                    <li><a class="footerLink" href="#">2 Quisque nisl felis</a></li>
+                    <li><a class="footerLink" href="#">2 Venenatis tristique</a></li>
+                    <li><a class="footerLink" href="#">2 Dignissim in</a></li>
+                    <li><a class="footerLink" href="#">2 Ultrices sit amet</a></li>
+                </ul>
+                
+                <ul class="footerList lastList">
+                    <li><a class="footerLink firstLink" href="#">3 Cras metus</a></li>
+                    <li><a class="footerLink" href="#">3 Sed aliquet risus</a></li>
+                    <li><a class="footerLink" href="#">3 Integer id quam</a></li>
+                    <li><a class="footerLink" href="#">3 Morbi mi</a></li>
+                    <li><a class="footerLink" href="#">3 Quisque nisl felis</a></li>
+                    <li><a class="footerLink" href="#">3 Venenatis tristique</a></li>
+                    <li><a class="footerLink" href="#">3 Dignissim in</a></li>
+                    <li><a class="footerLink" href="#">3 Ultrices sit amet</a></li>
+                </ul>
+            </div>
+        </div>
         <script>
 
             var width = window.innerWidth;
@@ -239,7 +272,6 @@
             }
         
         </script>
-        
-        </body>
+    </body>
     
 </html>

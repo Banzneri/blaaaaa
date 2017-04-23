@@ -8,7 +8,7 @@ html, body {
 }
 
 h1 {
-	font-family: Muli;
+	font-family: 'Muli', sans-serif;
 	font-size: 40px;
 	font-style: normal;
 	font-variant: normal;
@@ -16,6 +16,14 @@ h1 {
 	line-height: 26.4px;
     text-align: center;
     color: orange;
+}
+
+h2, h3, a {
+    font-family: 'Muli', sans-serif;
+}
+
+p {
+    font-family: 'Rajdhani', sans-serif;
 }
 
 h2 {
@@ -97,7 +105,7 @@ body.etusivu a.etusivu, body.lomake a.lomake, body.taulukko a.taulukko {
     bottom: 0;
     height: 300px;
     width: 100%;
-    background-color: lightgrey;
+    background-color: lightgray;
 }
 
 #topPage {
@@ -157,19 +165,26 @@ a.navigationBarLinks:active {
     position: relative;
     list-style-type: none;
     display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .footerLinkDiv{
     display: table;
     margin: 0 auto;
+    padding: 0px;
 }
 
 .footerLink {
     display: block;
     border-bottom: dotted black 1px;
-    border-top: dotted black 1px;
     text-decoration: none;
     color: #900;
+}
+
+.firstLink {
+    border-top: dotted black 1px;
+    border-bottom: dotted black 1px;
 }
 
 .sideBar {
@@ -204,7 +219,8 @@ a.navigationBarLinks:active {
 #car {
     position: relative;
     left: 57px;
-    bottom: 18px;
+    bottom: 35px;
+    margin-left: 35px;
 }
 
 #hiddenNavBar {
@@ -344,7 +360,7 @@ input:invalid {
     div.contentCenter {
         border-left-style: none;
         left: 0px;
-        padding: 10px;
+        margin: 0 auto;
         width: 90%;
         
     }
@@ -359,12 +375,12 @@ input:invalid {
     
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 590px) {
     .footer {
         height: 400px;
     }
     
-    .last {
+    .lastList {
         position: absolute;
         left: 50%;
         margin-left: -90px;
@@ -379,23 +395,20 @@ input:invalid {
     
 }
 
-@media screen and (max-width: 364px) {
+@media screen and (max-width: 400px) {
     .footer {
         height: 650px;
     }
     
-    .last {
+    .lastList {
         position: relative;
         left: 0px;
         margin-left: 0px;
     }
     
     .footerLinkDiv {
-        position: relative;
-        left: 20%;
-        width: 200px;;
-        display: block;
-        margin: 0px;
+        width: 200px;
+        margin: 0 auto;
     }
     
 }
