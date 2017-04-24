@@ -54,7 +54,7 @@
                 
                 <form name="lomake" onsubmit="return validateForm()">
                     <div id="lastNameWrapper">
-                        <label for="lastname" class="formLabel">Sukunimesi:</label>
+                        <label for="lastnameinput" class="formLabel">Sukunimesi:</label>
                         
                         <div id="lastname" style="display: inline;">
                             <input id="lastnameinput" type="text" name="sukunimi" onkeyup="validateWhileTyping(this.value)">
@@ -65,7 +65,7 @@
                     <br>
                     
                     <div id="sexWrapper">
-                            <label for="sex" class="formLabel">Sukupuolesi:</label>
+                            <label class="formLabel">Sukupuolesi:</label>
 
                             <div id="sex">
                                 
@@ -100,11 +100,11 @@
                     </div>
                     
                     <br><br>
-                    <div id="hiddenFormField" name="muu"></div>
+                    <div id="hiddenFormField"></div>
                     
                     <br>
                     
-                    <input id="submit" type="submit" value="Submit">
+                    <input id="submit" type="submit" value="Lähetä">
                 </form>
 
             </div>
@@ -221,10 +221,14 @@
             }
             
             function validateOtherCar(car) {
+                
+                var other = document.forms["lomake"]["muu"].value;
+                
                 if(car == 'muu') {
-                    var other = document.forms["lomake"]["muu"].value;
-                    if(other.length > 0) {
+                    if(other.length >= 3) {
                         return true;
+                    } else {
+                        return false;
                     }
                 } else if(car.length > 0) {
                     return true;
@@ -266,7 +270,7 @@
                 
                 return false;
             }
-        
+            
             function validateWhileTyping(name) {
 
                 if(name.length >= 3) {

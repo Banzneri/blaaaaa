@@ -3,7 +3,6 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta id="viewport" name="viewport" content ="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="unresponsive.css" />
         <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet"> 
@@ -15,6 +14,7 @@
     
     
     <body class="taulukko">
+	<div class="all">
         <div class='redBar'>
             <h1>EX NIHILO NIHIL FIT</h1>
 
@@ -138,8 +138,28 @@
                 </table> 
             </div>
         </div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById('hiddenNavBar');
+                if (x.style.display == 'block') {
+                    x.style.display = 'none';
+                } else {
+                    x.style.display = 'block';
+                }
+            }
+        </script>
         
-        <div class="footer">
+        <script>
+        var width = window.innerWidth;
+        window.addEventListener('resize', function(event){
+            var x = document.getElementById('hiddenNavBar');
+            if(window.innerWidth != width){
+                x.style.display = 'none';
+            }
+        });
+        </script>
+    </div>
+        <footer class="footer">
             <div class="footerLinkDiv">
                 <ul class="footerList firstList">
                     <li><a class="footerLink firstLink" href="#">1 Cras metus</a></li>
@@ -174,30 +194,7 @@
                     <li><a class="footerLink" href="#">3 Ultrices sit amet</a></li>
                 </ul>
             </div>
-        </div>
-    
-        
-        <script>
-            function myFunction() {
-                var x = document.getElementById('hiddenNavBar');
-                if (x.style.display == 'block') {
-                    x.style.display = 'none';
-                } else {
-                    x.style.display = 'block';
-                }
-            }
-        </script>
-        
-        <script>
-        var width = window.innerWidth;
-        window.addEventListener('resize', function(event){
-            var x = document.getElementById('hiddenNavBar');
-            if(window.innerWidth != width){
-                x.style.display = 'none';
-            }
-        });
-        </script>
-        
+        </footer>
     </body>
     
 </html>

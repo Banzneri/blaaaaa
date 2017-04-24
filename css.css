@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
 body {
     top: 0px;
     min-height:100%;
@@ -26,7 +32,7 @@ h2, h3, a {
     font-family: 'Muli', sans-serif;
 }
 
-p {
+p, form {
     font-family: 'Rajdhani', sans-serif;
 }
 
@@ -40,6 +46,23 @@ h2 {
     height: 250px;
     float: right;
     padding-left: 5px;
+}
+
+.imageWrapper {
+    position: relative;
+}
+
+.transBox {
+    position: absolute;
+    right: 0;
+    width: 80px;
+    height: 250px;
+    padding:5px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.transBox p {
+    color: white;
 }
 
 body.etusivu a.etusivu, body.lomake a.lomake, body.taulukko a.taulukko {
@@ -117,9 +140,6 @@ td:hover {
 }
 
 .contentCenter {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     position: relative;
     float: right;
     top:10px;
@@ -164,9 +184,6 @@ body.taulukko div.footer {
 }
 
 .navigationBarLinks {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     float:left;
     margin-right: 5px;
     background-color: orange;
@@ -323,7 +340,7 @@ input:invalid {
         
     }
     
-    .image {
+    .imageWrapper {
         display: none;
     }
 
@@ -398,10 +415,9 @@ input:invalid {
         display: none;
     }
     
-    .image {
+    .imageWrapper {
+        width: 400px;
         display: block;
-        float: none;
-        padding-bottom: 10px;
         margin: 0 auto;
         overflow: auto;
     }
@@ -442,7 +458,7 @@ input:invalid {
 }
 
 @media screen and (max-width: 500px) {
-    .image {
+    .imageWrapper {
         display: none;
     }
     
@@ -487,9 +503,5 @@ input:invalid {
     #submit {
         margin: 0px;
     }
-    
-}
-
-@media screen and (max-width: 360px) {
     
 }
